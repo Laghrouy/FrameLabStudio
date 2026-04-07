@@ -109,9 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <h2 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;letter-spacing:-0.01em;margin-bottom:12px;color:var(--text);">${data.title}</h2>
           <p style="font-size:13px;font-weight:500;color:var(--tan-dark);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:24px;">${data.category}</p>
           <p style="font-size:15px;color:var(--text-secondary);line-height:1.8;margin-bottom:24px;">${data.description}</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;${data.url ? 'margin-bottom:24px;' : ''}">
             ${data.tags.map(t => `<span style="padding:4px 12px;background:rgba(193,169,141,0.12);border-radius:100px;font-size:12px;color:var(--text-secondary);">${t}</span>`).join('')}
           </div>
+          ${data.url ? `<a href="${data.url}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--gold);color:#fff5ea;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;">Visiter le site <svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/><polyline points='15 3 21 3 21 9'/><line x1='10' y1='14' x2='21' y2='3'/></svg></a>` : ''}
         `;
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -152,6 +153,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Project Data ---
 function getProjectData(id) {
   const projects = {
+    'air-pizza': {
+      title: 'Air Pizza',
+      category: 'Site Vitrine Multi-villes',
+      description: 'Site vitrine pour une pizzeria premium à l\'ambiance basket. Sélection dynamique de ville (Grenoble / Lausanne), menu interactif et expérience immersive livraison & sur place.',
+      tags: ['Site Vitrine', 'Multi-villes', 'Design Premium', 'Mobile-First'],
+      url: 'https://laghrouy.github.io/Air_Pizza/'
+    },
+    'owaffle': {
+      title: 'O\'waffle',
+      category: 'Site Vitrine Restauration',
+      description: 'Site vitrine pour le snack gourmand grenoblois — crêpes, gaufres et desserts. Menu interactif par catégorie, avis Google intégrés, galerie photos et liens de commande Uber Eats & Deliveroo.',
+      tags: ['Site Vitrine', 'Food & Restauration', 'SEO Local', 'Responsive'],
+      url: 'https://laghrouy.github.io/Owaffle/'
+    },
     'luxe-hotel': {
       title: 'Luxe Hôtel & Spa',
       category: 'Site Vitrine Premium',
