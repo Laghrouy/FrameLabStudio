@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff5ea"/>
+      <stop offset="100%" style="stop-color:#f5e6d0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4e5f43"/>
+      <stop offset="100%" style="stop-color:#3e5137"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4e5f43;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#c1a98d;stop-opacity:0.08"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Ambient glow circles -->
+  <circle cx="200" cy="200" r="300" fill="#4e5f43" opacity="0.06" filter="url(#blur)"/>
+  <circle cx="1000" cy="430" r="280" fill="#c1a98d" opacity="0.1" filter="url(#blur)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.06" stroke="#4e5f43" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- Decorative frame rectangle top-right -->
+  <rect x="920" y="60" width="180" height="180" rx="16" stroke="url(#accent)" stroke-width="2" fill="none" opacity="0.25"/>
+  <rect x="950" y="90" width="100" height="100" rx="8" stroke="url(#accent)" stroke-width="1.5" fill="none" opacity="0.2"/>
+
+  <!-- Logo icon -->
+  <rect x="100" y="215" width="72" height="72" rx="14" stroke="url(#accent)" stroke-width="3" fill="none"/>
+  <rect x="116" y="231" width="30" height="30" rx="6" stroke="url(#accent)" stroke-width="2.5" fill="none"/>
+  <line x1="154" y1="269" x2="172" y2="287" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Brand name -->
+  <text x="192" y="244" font-family="'Cormorant Garamond', Georgia, serif" font-size="38" font-weight="700" fill="#4e5f43" letter-spacing="1">FrameLab</text>
+  <text x="192" y="287" font-family="'Cormorant Garamond', Georgia, serif" font-size="38" font-weight="700" fill="#c1a98d" letter-spacing="1">Studio</text>
+
+  <!-- Separator line -->
+  <rect x="100" y="326" width="360" height="2" rx="1" fill="url(#accent)" opacity="0.4"/>
+
+  <!-- Main headline -->
+  <text x="100" y="405" font-family="'Cormorant Garamond', Georgia, serif" font-size="58" font-weight="700" fill="#4e5f43">Expériences</text>
+  <text x="100" y="470" font-family="'Cormorant Garamond', Georgia, serif" font-size="58" font-weight="700" fill="#c1a98d">Digitales Premium</text>
+
+  <!-- Tagline -->
+  <text x="100" y="530" font-family="'Nunito', Arial, sans-serif" font-size="22" fill="#4e5f43" opacity="0.6" letter-spacing="0.5">Création de sites web · Design · Performance · Grenoble</text>
+
+  <!-- URL badge -->
+  <rect x="100" y="558" width="320" height="40" rx="20" fill="url(#accent)" opacity="0.15"/>
+  <rect x="100" y="558" width="320" height="40" rx="20" stroke="url(#accent)" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="260" y="584" font-family="'Poppins', Arial, sans-serif" font-size="16" fill="#4e5f43" opacity="0.85" text-anchor="middle" letter-spacing="1">framelabstudio.com</text>
+</svg>

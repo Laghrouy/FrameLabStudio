@@ -1,0 +1,55 @@
+# =============================================
+# FrameLab Studio — Configuration Apache
+# =============================================
+
+# --- Page d'erreur personnalisée ---
+ErrorDocument 404 /404.html
+
+# --- Compression Gzip ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/xml image/svg+xml
+</IfModule>
+
+# --- Cache navigateur ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html             "access plus 1 hour"
+  ExpiresByType text/css              "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2            "access plus 1 year"
+  ExpiresByType image/svg+xml         "access plus 1 year"
+  ExpiresByType image/png             "access plus 1 year"
+  ExpiresByType image/jpeg            "access plus 1 year"
+  ExpiresByType image/webp            "access plus 1 year"
+</IfModule>
+
+# --- En-têtes de sécurité ---
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google.com https://maps.gstatic.com; frame-src https://www.google.com; connect-src 'self' https://api.emailjs.com;"
+</IfModule>
+
+# --- HTTPS forcé (décommenter en production) ---
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# --- Bloquer l'accès aux fichiers sensibles ---
+<FilesMatch "\.(env|git|htaccess|htpasswd|json)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# --- Autoriser l'accès au sitemap et robots ---
+<Files "sitemap.xml">
+  Allow from all
+</Files>
+<Files "robots.txt">
+  Allow from all
+</Files>

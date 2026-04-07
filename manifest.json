@@ -1,0 +1,18 @@
+{
+  "name": "FrameLab Studio",
+  "short_name": "FrameLab",
+  "description": "Agence digitale premium — Création de sites web modernes, performants et orientés conversion.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff5ea",
+  "theme_color": "#4e5f43",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

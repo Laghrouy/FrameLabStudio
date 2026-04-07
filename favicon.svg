@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fond vert foncé arrondi -->
+  <rect width="64" height="64" rx="12" fill="#344a28"/>
+  <!-- Forme L (barre haut + barre gauche) -->
+  <path d="M10 10H37V20H20V44H10Z" fill="#fff5ea"/>
+  <!-- Petit rectangle bas-droite -->
+  <rect x="27" y="30" width="27" height="24" rx="3" fill="#fff5ea"/>
+</svg>

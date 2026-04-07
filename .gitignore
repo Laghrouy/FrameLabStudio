@@ -1,0 +1,18 @@
+# Fichiers lourds et inutiles pour le déploiement
+*.pdf
+*.psd
+*.ai
+*.sketch
+
+# VS Code
+.vscode/
+
+# Fichiers internes
+audit_code.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (au cas où)
+node_modules/
