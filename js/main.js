@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       loader.classList.add('hidden');
       document.body.style.overflow = '';
       initRevealAnimations();
-      // Charger Three.js + scène 3D seulement après que le contenu soit visible
-      loadScene3D();
     };
     window.addEventListener('load', () => {
       setTimeout(hideLoader, 400);
@@ -61,22 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (!loader) initRevealAnimations();
-
-  // --- Lazy load Three.js + scène 3D après affichage ---
-  function loadScene3D() {
-    const sceneEl = document.getElementById('scene-hero-visual');
-    if (!sceneEl) return;
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-    script.onload = () => {
-      const s2 = document.createElement('script');
-      s2.src = 'js/scene3d.js';
-      document.body.appendChild(s2);
-    };
-    document.body.appendChild(script);
-  }
-
-  if (!loader) loadScene3D();
 
   // --- Cursor Glow Follower ---
   const cursorGlow = document.getElementById('cursor-glow');
