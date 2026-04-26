@@ -288,6 +288,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Project Data ---
 function getProjectData(id) {
   const projects = {
+    'absolut-beauty': {
+      title: 'Absolut Beauty',
+      category: 'Institut beauté & onglerie',
+      description: 'Site vitrine pour un institut beauté à Fayence, avec réservation en ligne, présentation des soins visage, onglerie et épilation, et mise en avant des protocoles Guinot & Senteales.',
+      tags: ['Beauté', 'Onglerie', 'Réservation en ligne', 'Responsive'],
+      url: 'https://laghrouy.github.io/Absolut_Beauty/'
+    },
     'air-pizza': {
       title: 'Air Pizza',
       category: 'Site Vitrine Multi-villes',
